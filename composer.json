@@ -1,0 +1,26 @@
+{
+    "name": "oywenjiao/php-tool-kit",
+    "description": "集成常用工具类",
+    "keywords": ["wx", "tool", "oywenjiao", "express", "image", "baidu", "小程序", "快递"],
+    "homepage": "https://github.com/oywenjiao/php-tool-kit",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OuYang WenJiao",
+            "email": "wenjiao8605@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "guzzlehttp/guzzle": "~6.0",
+        "ext-json": "*",
+        "firebase/php-jwt": "^5.0",
+        "php-curl-class/php-curl-class": "^9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wj\\ToolKit\\": "src"
+        }
+    }
+}
