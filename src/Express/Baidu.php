@@ -4,6 +4,11 @@ namespace Wj\ToolKit\Express;
 
 use Curl\Curl;
 
+/**
+ * 百度快递查询
+ * Class Baidu
+ * @package Wj\ToolKit\Express
+ */
 class Baidu
 {
 
