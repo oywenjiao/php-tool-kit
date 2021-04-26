@@ -14,5 +14,18 @@ PHP工具箱
         
         ```php
             $obj = new Baidu();
-            $response = $obj->query('YT123456', '圆通速度');
+            $response = $obj->query('YT123456', '圆通速递');
+        ```
+      
+    + BirdLogistics 快递鸟查询接口
+        + ## 使用示例
+        
+        ```php
+            $appKey = 'your app_key';   // 快递鸟账号密钥
+            $businessId = 'your businessId';    // 快递鸟账号id
+            $obj = new BirdLogistics($appKey, $businessId);
+            $trade_sn = '123456';   // 商户订单号
+            $ship_code  = 'YTO';    // 快递公司编码
+            $ship_sn    = '123456'; // 快递单号
+            $response = $obj->getOrderTracesByJson($trade_sn, $ship_code, $ship_sn);
         ```
