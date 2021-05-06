@@ -29,3 +29,13 @@ PHP工具箱
             $ship_sn    = '123456'; // 快递单号
             $response = $obj->getOrderTracesByJson($trade_sn, $ship_code, $ship_sn);
         ```
+      
++ Wechat    微信生态
+    + WxBase    微信操作公共类，所有的微信相关api基于该公共类的基础上进行调用
+        + ## 示例
+    
+        ```php
+            $appId = 'your appid';  // 公众号appid
+            $appSecret = 'your appSecret';  // 公众号app_secret
+            $base = new WxBase($appId, $appSecret);
+        ```
