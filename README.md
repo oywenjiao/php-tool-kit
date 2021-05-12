@@ -39,3 +39,19 @@ PHP工具箱
             $appSecret = 'your appSecret';  // 公众号app_secret
             $base = new WxBase($appId, $appSecret);
         ```
+      
+    + Order     微信订单操作类
+        + ## 示例
+        ```php
+            $wx_order = new Order($base);
+            $mchId = "your mch_id";     // 商户号id
+            $key = "your key";  // 商户密钥
+            $wx_order->setMchID($mchId)->setKey($key);  // 设置密钥和商户号
+            
+            // 调用统一下单接口
+            $openid = 'your openid';    // 用户openid
+            $trade_sn = 'your trade_sn';    // 商户订单号
+            $price = '1.00';    // 订单价格
+            $notify = 'your notify';    // 回调地址
+            $res = $wx_order->unifiedOrder($openid, $trade_sn, $price, $notify);
+        ```
