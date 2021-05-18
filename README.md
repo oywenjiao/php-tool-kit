@@ -54,4 +54,16 @@ PHP工具箱
             $price = '1.00';    // 订单价格
             $notify = 'your notify';    // 回调地址
             $res = $wx_order->unifiedOrder($openid, $trade_sn, $price, $notify);
+      
+            // 调用企业付款 
+            $wx_order = new Order($base);
+            $cert = 'your cert';    // cert 证书路径
+            $ssl_key = 'your ssl_key';  // ssl_key 证书路径
+            $openid = 'your openid';    // 用户openid
+            $trade_sn = 'your trade_sn';    // 商户订单号
+            $price = '1.00';    // 提现金额
+            $desc = '提现描述';
+            $wx_order->setMchID($mchId)->setKey($key)->setCert($cert)->setSslKey($ssl_key);
+            $res = $wx_order->payToUser($openid, $trade_sn, $price, $desc);
         ```
+    
