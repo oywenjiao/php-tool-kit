@@ -66,4 +66,15 @@ PHP工具箱
             $wx_order->setMchID($mchId)->setKey($key)->setCert($cert)->setSslKey($ssl_key);
             $res = $wx_order->payToUser($openid, $trade_sn, $price, $desc);
         ```
+      
+    +   TemplateMessage     微信消息操作类
+        + ##  示例
+        ```php
+            $message = new TemplateMessage($base);
+            $openid = 'user openid';    // 接收消息的用户openid
+            $template_id = 'your template_id';  // 消息模板id
+            $params = [];   // 消息模板需传递的参数数组
+            $page = 'your xcx page url';    // 消息跳转地址
+            $result = $message->sendXcxMessage($openid, $template_id, $params, $page);
+        ```
     
