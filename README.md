@@ -77,4 +77,21 @@ PHP工具箱
             $page = 'your xcx page url';    // 消息跳转地址
             $result = $message->sendXcxMessage($openid, $template_id, $params, $page);
         ```
+        
++ Kind 工具类集合
+
+    + AuthManage    权限相关的类
+    
+        + JwtManage jwt验证类
+            + ##    示例
+            ```php
+                $publicKey = 'your public_key'; // 公钥
+                $privateKey = 'your private_key';   // 私钥
+                $jwt = new JwtManage($publicKey, $privateKey);
+                // 加密
+                $payload = array('user_id' => 1234, 'expire' => time() + 100);
+                $token = $jwt->encode($payload);
+                // 解密
+                $result = $jwt->decode($token);
+            ```
     
